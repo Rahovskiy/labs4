@@ -52,9 +52,9 @@ public class GraphicsDisplay extends JPanel {
                 BasicStroke.JOIN_MITER, 10.0f, null, 0.0f);
         // Перо для рисования контуров маркеров
         markerStroke = new BasicStroke(2.0f, BasicStroke.CAP_BUTT,
-                BasicStroke.JOIN_MITER, 10.0f, null, 0.0f);
+                BasicStroke.JOIN_MITER, 10.0f, null, 1.0f);
         // Шрифт для подписей осей координат
-        axisFont = new Font("Serif", Font.BOLD, 36);
+        axisFont = new Font("Serif", Font.BOLD, 40);
     }
 
     // Данный метод вызывается из обработчика элемента меню "Открыть файл с графиком"
@@ -163,7 +163,7 @@ public class GraphicsDisplay extends JPanel {
         // Выбрать линию для рисования графика
         canvas.setStroke(graphicsStroke);
         // Выбрать цвет линии
-        canvas.setColor(Color.RED);
+        canvas.setColor(Color.BLUE);
         /* Будем рисовать линию графика как путь, состоящий из множества сегментов (GeneralPath)
          * Начало пути устанавливается в первую точку графика, после чего прямой соединяется со
          * следующими точками
